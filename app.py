@@ -30,8 +30,8 @@ st.set_page_config(page_title="E-Commerce Sales Analytics", page_icon="📊", la
 st.markdown(
     """
     <style>
-    :root { --ink: #1d2a32; --muted: #66747c; --line: #dce3e5; --teal: #087e78; --coral: #d45d48; }
-    .stApp { background-color: #f3f7f6; background-image: radial-gradient(#dce8e5 0.7px, transparent 0.7px); background-size: 18px 18px; }
+    :root { --ink: #0f172a; --muted: #64748b; --line: #e2e8f0; --teal: #2563eb; --coral: #f59e0b; }
+    .stApp { background-color: #f8fafc; background-image: radial-gradient(#e2e8f0 0.7px, transparent 0.7px); background-size: 18px 18px; }
     h1, h2, h3 { color: var(--ink); }
     [data-testid="stMetric"] { background: #ffffff; border: 1px solid var(--line); border-top: 3px solid var(--teal); padding: 12px 14px; border-radius: 6px; }
     [data-testid="stMetricValue"] { color: var(--ink); }
@@ -238,10 +238,13 @@ else:
                 for row in revenue_rows
             ]
             if revenue_table:
-                chart = go.Figure(go.Bar(x=[row["Product"] for row in revenue_table],
-                                         y=[row["revenue_cents"] / 100 for row in revenue_rows],
-                                         marker_color="#087e78"))
-                chart.update_layout(height=330, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="Revenue")
+                chart = go.Figure(go.Bar(y=[row["Product"] for row in revenue_table],
+                                         x=[row["revenue_cents"] / 100 for row in revenue_rows],
+                                         orientation="h", marker_color="#2563eb",
+                                         text=[row["Revenue"] for row in revenue_table], textposition="outside",
+                                         cliponaxis=False))
+                chart.update_layout(height=380, margin=dict(l=10, r=60, t=10, b=10), xaxis_title="Revenue ($)",
+                                    yaxis=dict(autorange="reversed"), xaxis=dict(gridcolor="rgba(15,23,42,.08)"))
                 st.plotly_chart(chart, use_container_width=True)
                 st.dataframe(revenue_table, hide_index=True, use_container_width=True)
                 render_download("Download revenue ranking", revenue_table, "top_products_revenue.csv", "download_revenue")
@@ -271,13 +274,15 @@ else:
             chart = go.Figure()
             chart.add_trace(go.Scatter(x=[row["key"] for row in month_rows],
                                        y=[row["revenue_cents"] / 100 for row in month_rows],
-                                       mode="lines+markers", name="Revenue", line=dict(color="#087e78", width=3)))
+                                       mode="lines+markers", name="Revenue (left axis)", line=dict(color="#2563eb", width=3)))
             chart.add_trace(go.Scatter(x=[row["key"] for row in month_rows],
                                        y=[row["order_count"] for row in month_rows],
-                                       mode="lines+markers", name="Distinct orders", yaxis="y2",
-                                       line=dict(color="#d45d48", width=2)))
-            chart.update_layout(height=390, margin=dict(l=10, r=10, t=20, b=10),
-                                yaxis=dict(title="Revenue"), yaxis2=dict(title="Orders", overlaying="y", side="right"))
+                                       mode="lines+markers", name="Distinct orders (right axis)", yaxis="y2",
+                                       line=dict(color="#f59e0b", width=3)))
+            chart.update_layout(height=390, margin=dict(l=10, r=10, t=20, b=10), legend=dict(orientation="h", y=1.1),
+                                xaxis=dict(title="Month"),
+                                yaxis=dict(title="Revenue ($)", gridcolor="rgba(15,23,42,.08)"),
+                                yaxis2=dict(title="Orders", overlaying="y", side="right", showgrid=False))
             st.plotly_chart(chart, use_container_width=True)
             monthly_table = [
                 {"Month": row["key"], "Revenue": money(row["revenue_cents"]), "Units": row["quantity"],
@@ -298,8 +303,10 @@ else:
             if region_rows:
                 chart = go.Figure(go.Bar(x=[row["key"] for row in region_rows],
                                          y=[row["revenue_cents"] / 100 for row in region_rows],
-                                         marker_color="#d45d48"))
-                chart.update_layout(height=330, margin=dict(l=10, r=10, t=10, b=10))
+                                         marker_color="#f59e0b", text=[money(row["revenue_cents"]) for row in region_rows],
+                                         textposition="outside"))
+                chart.update_layout(height=330, margin=dict(l=10, r=10, t=20, b=10), xaxis_title="Region",
+                                    yaxis=dict(title="Revenue ($)", gridcolor="rgba(15,23,42,.08)"))
                 st.plotly_chart(chart, use_container_width=True)
                 region_table = [{"Region": row["key"], "Revenue": money(row["revenue_cents"]), "Units": row["quantity"]} for row in region_rows]
                 st.dataframe(region_table, hide_index=True, use_container_width=True)
@@ -310,9 +317,11 @@ else:
             st.subheader("Revenue by category")
             if category_rows:
                 chart = go.Figure(go.Pie(labels=[row["key"] for row in category_rows],
-                                         values=[row["revenue_cents"] for row in category_rows], hole=0.45,
-                                         marker_colors=["#087e78", "#d45d48", "#e0a52b", "#426b8a", "#6b8f71"]))
-                chart.update_layout(height=330, margin=dict(l=10, r=10, t=10, b=10))
+                                         values=[row["revenue_cents"] for row in category_rows], hole=0.5,
+                                         marker=dict(colors=["#2563eb", "#f59e0b", "#10b981", "#ef4444", "#8b5cf6", "#06b6d4"],
+                                                     line=dict(color="white", width=2)),
+                                         textinfo="label+percent", sort=False))
+                chart.update_layout(height=330, margin=dict(l=10, r=10, t=10, b=10), showlegend=False)
                 st.plotly_chart(chart, use_container_width=True)
                 category_table = [{"Category": row["key"], "Revenue": money(row["revenue_cents"]), "Units": row["quantity"]} for row in category_rows]
                 st.dataframe(category_table, hide_index=True, use_container_width=True)

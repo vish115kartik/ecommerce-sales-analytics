@@ -41,11 +41,11 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --g50:  #f0fdf4; --g100: #dcfce7; --g200: #bbf7d0; --g300: #86efac;
-  --g400: #4ade80; --g500: #22c55e; --g600: #16a34a; --g700: #15803d;
-  --g800: #166534; --g900: #14532d;
-  --ink:  #0f1c15; --muted: #64748b; --line: #e2e8f0;
-  --card: #ffffff; --bg:   #f0fdf4;
+  --g50:  #eff6ff; --g100: #dbeafe; --g200: #bfdbfe; --g300: #93c5fd;
+  --g400: #60a5fa; --g500: #3b82f6; --g600: #2563eb; --g700: #1d4ed8;
+  --g800: #1e40af; --g900: #1e3a8a;
+  --ink:  #0f172a; --muted: #64748b; --line: #e2e8f0;
+  --card: #ffffff; --bg:   #f8fafc;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -125,7 +125,7 @@ button[aria-label="Open sidebar"] {
   padding: 10px 16px !important;
   font-size: .88rem !important;
   font-weight: 500 !important;
-  color: #a7f3d0 !important;
+  color: #bfdbfe !important;
   cursor: pointer !important;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
   display: flex !important;
@@ -135,17 +135,17 @@ button[aria-label="Open sidebar"] {
 [data-testid="stSidebar"] [data-testid="stRadio"] label:hover {
   background: rgba(255, 255, 255, 0.09) !important;
   color: #ffffff !important;
-  border-color: rgba(74, 222, 128, 0.35) !important;
+  border-color: rgba(96, 165, 250, 0.35) !important;
   transform: translateX(4px) !important;
 }
 [data-testid="stSidebar"] [data-testid="stRadio"] [aria-checked="true"] + label,
 [data-testid="stSidebar"] [data-testid="stRadio"] label[data-checked="true"],
 [data-testid="stSidebar"] [data-testid="stRadio"] label:has(input:checked) {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.32) 0%, rgba(21, 128, 61, 0.45) 100%) !important;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.35) 0%, rgba(29, 78, 216, 0.5) 100%) !important;
   color: #ffffff !important;
   font-weight: 600 !important;
-  border: 1px solid rgba(74, 222, 128, 0.5) !important;
-  border-left: 4px solid #22c55e !important;
+  border: 1px solid rgba(96, 165, 250, 0.5) !important;
+  border-left: 4px solid #f59e0b !important;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22) !important;
   transform: translateX(2px) !important;
 }
@@ -175,7 +175,7 @@ button[aria-label="Open sidebar"] {
   transition: box-shadow .2s, transform .2s !important;
 }
 [data-testid="stMetric"]:hover {
-  box-shadow: 0 8px 24px rgba(22,163,74,.15) !important;
+  box-shadow: 0 8px 24px rgba(37,99,235,.15) !important;
   transform: translateY(-2px) !important;
 }
 [data-testid="stMetric"]::before {
@@ -195,13 +195,13 @@ button[aria-label="Open sidebar"] {
   box-shadow: 0 1px 4px rgba(0,0,0,.05); height: 100%;
   transition: box-shadow .2s;
 }
-.dash-card:hover { box-shadow: 0 6px 20px rgba(22,163,74,.1); }
+.dash-card:hover { box-shadow: 0 6px 20px rgba(37,99,235,.1); }
 .section-title { font-size: 1.02rem; font-weight: 700; color: var(--ink); }
 .card-title { font-size: .8rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 .card-value { font-size: 1.9rem; font-weight: 800; color: var(--ink); }
 
 /* Badges */
-.badge-g { background:#dcfce7; color:#15803d; border-radius:20px; padding:3px 11px; font-size:.72rem; font-weight:600; display:inline-block; }
+.badge-g { background:#dbeafe; color:#1d4ed8; border-radius:20px; padding:3px 11px; font-size:.72rem; font-weight:600; display:inline-block; }
 .badge-a { background:#fef3c7; color:#92400e; border-radius:20px; padding:3px 11px; font-size:.72rem; font-weight:600; display:inline-block; }
 .badge-r { background:#fee2e2; color:#b91c1c; border-radius:20px; padding:3px 11px; font-size:.72rem; font-weight:600; display:inline-block; }
 .badge-b { background:#dbeafe; color:#1d4ed8; border-radius:20px; padding:3px 11px; font-size:.72rem; font-weight:600; display:inline-block; }
@@ -243,21 +243,21 @@ button[aria-label="Open sidebar"] {
   margin-bottom: 10px;
 }
 .nav-logo-name { font-size: 1.15rem; font-weight: 800; color: white; letter-spacing: -.02em; line-height: 1.25; }
-.nav-section   { padding: 10px 18px 6px; font-size: .67rem; font-weight: 700; color: #4ade80; text-transform: uppercase; letter-spacing: .12em; opacity: .9; }
+.nav-section   { padding: 10px 18px 6px; font-size: .67rem; font-weight: 700; color: #93c5fd; text-transform: uppercase; letter-spacing: .12em; opacity: .9; }
 .nav-divider   { height: 1px; background: rgba(255,255,255,.08); margin: 12px 18px; }
 .upgrade-box   {
   margin: 14px 14px; padding: 14px 16px;
-  background: linear-gradient(135deg, #15803d, #166534);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
   border-radius: 14px; border: 1px solid rgba(255,255,255,.12);
 }
 .upgrade-box .ub-title { font-size: .88rem; font-weight: 700; color: white; }
-.upgrade-box .ub-sub   { font-size: .72rem; color: #86efac; margin-top: 3px; line-height: 1.4; }
+.upgrade-box .ub-sub   { font-size: .72rem; color: #bfdbfe; margin-top: 3px; line-height: 1.4; }
 
 /* Progress bar */
 .prog-row { display:flex; align-items:center; justify-content:space-between; margin: 5px 0; }
-.prog-label { font-size:.8rem; font-weight:500; color:#0f1c15; width:65px; }
-.prog-bar-wrap { flex:1; margin:0 10px; background:#f0fdf4; border-radius:99px; height:6px; overflow:hidden; }
-.prog-bar-fill { height:100%; border-radius:99px; background:linear-gradient(90deg,#22c55e,#16a34a); }
+.prog-label { font-size:.8rem; font-weight:500; color:#0f172a; width:65px; }
+.prog-bar-wrap { flex:1; margin:0 10px; background:#eff6ff; border-radius:99px; height:6px; overflow:hidden; }
+.prog-bar-fill { height:100%; border-radius:99px; background:linear-gradient(90deg,#3b82f6,#2563eb); }
 .prog-pct { font-size:.75rem; color:#64748b; width:32px; text-align:right; }
 
 ::-webkit-scrollbar { width:5px; height:5px; }
@@ -403,7 +403,7 @@ with st.sidebar:
         c_count = len(st.session_state["custom_data"]["orders"])
         c_name = st.session_state.get("custom_name", "Custom CSV")
         st.markdown(f"""
-        <div class="upgrade-box" style="background: linear-gradient(135deg, #047857, #065f46);">
+        <div class="upgrade-box" style="background: linear-gradient(135deg, #1d4ed8, #1e3a8a);">
           <div class="ub-title">Active Dataset</div>
           <div class="ub-sub">Custom: {c_name}<br>{c_count:,} orders analyzed</div>
         </div>
@@ -440,7 +440,10 @@ names: dict[str, str] = {}
 for p in joins.get("rows", []):
     names[p["product_id"]] = p.get("product_name") or p["product_id"]
 
-GREEN_PAL = ["#14532d", "#15803d", "#16a34a", "#22c55e", "#4ade80", "#86efac", "#bbf7d0"]
+# Distinct colors so categories/regions are easy to tell apart; BLUE/ORANGE are for single-series charts.
+CAT_PAL = ["#2563eb", "#f59e0b", "#10b981", "#ef4444", "#8b5cf6", "#06b6d4", "#ec4899"]
+BLUE, BLUE_LIGHT, ORANGE = "#2563eb", "#93c5fd", "#f59e0b"
+GRID = "rgba(15,23,42,.08)"
 
 
 # =============================================================================
@@ -554,20 +557,17 @@ elif page == "Dashboard":
         max_rev = max(revenues) if revenues else 1
 
         fig = go.Figure()
-        bar_colors = [
-            "rgba(22,163,74,0.9)" if v == max_rev else "rgba(22,163,74,0.42)"
-            for v in revenues
-        ]
+        bar_colors = [BLUE if v == max_rev else BLUE_LIGHT for v in revenues]
         fig.add_trace(go.Bar(
-            x=months, y=revenues, name="Revenue",
+            x=months, y=revenues, name="Revenue (bars, left axis)",
             marker=dict(color=bar_colors, line=dict(width=0)),
             hovertemplate="<b>%{x}</b><br>Revenue: ₹%{y:,.2f}<extra></extra>",
         ))
         fig.add_trace(go.Scatter(
-            x=months, y=ord_counts, name="Orders",
+            x=months, y=ord_counts, name="Orders (line, right axis)",
             yaxis="y2", mode="lines+markers",
-            line=dict(color="#86efac", width=2, dash="dot"),
-            marker=dict(size=5, color="#22c55e"),
+            line=dict(color=ORANGE, width=3),
+            marker=dict(size=8, color=ORANGE),
             hovertemplate="<b>%{x}</b><br>Orders: %{y}<extra></extra>",
         ))
         fig.update_layout(
@@ -576,12 +576,13 @@ elif page == "Dashboard":
                 text=(f"<b>Transaction Activity</b><br>"
                       f"<span style='font-size:22px;font-weight:800'>{money(total_rev_cents)}</span>"
                       f" &nbsp;<span style='font-size:12px;color:#64748b'>Total Revenue</span>"),
-                font=dict(size=13), x=0, y=1, yanchor="top", pad=dict(t=0),
+                font=dict(size=14), x=0, y=0.97, yanchor="top", pad=dict(t=0),
             ),
-            margin=dict(l=0, r=0, t=60, b=0),
-            yaxis=dict(gridcolor="rgba(0,0,0,.05)", tickprefix="₹", tickfont=dict(size=10)),
-            yaxis2=dict(overlaying="y", side="right", showgrid=False, tickfont=dict(size=10)),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, font=dict(size=11)),
+            margin=dict(l=0, r=0, t=75, b=0),
+            yaxis=dict(gridcolor=GRID, tickprefix="₹", tickfont=dict(size=11), title="Revenue (₹)"),
+            xaxis=dict(title="Month", tickfont=dict(size=11)),
+            yaxis2=dict(overlaying="y", side="right", showgrid=False, tickfont=dict(size=11), title="Orders"),
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, font=dict(size=12)),
             hovermode="x unified", bargap=0.3,
         )
         with st.container(border=True):
@@ -590,36 +591,40 @@ elif page == "Dashboard":
     with col_gauge:
         gauge_fig = go.Figure(go.Indicator(
             mode="gauge+number+delta",
+            domain={"x": [0, 1], "y": [0, 0.78]},
             value=pct,
             delta={"reference": 50, "valueformat": ".0f", "suffix": "%"},
-            number={"suffix": "%", "font": {"size": 40, "family": "Inter", "color": "#0f1c15"}},
+            number={"suffix": "%", "font": {"size": 40, "family": "Inter", "color": "#0f172a"}},
             gauge={
-                "axis": {"range": [0, 100], "tickwidth": 1, "tickcolor": "#e2e8f0",
-                         "tickfont": {"size": 9}, "nticks": 6},
-                "bar": {"color": "#16a34a", "thickness": 0.3},
+                "axis": {"range": [0, 100], "tickwidth": 1, "tickcolor": "#94a3b8",
+                         "tickfont": {"size": 10}, "nticks": 6},
+                "bar": {"color": BLUE, "thickness": 0.3},
                 "bgcolor": "white", "borderwidth": 0,
                 "steps": [
-                    {"range": [0,  40], "color": "#f0fdf4"},
-                    {"range": [40, 70], "color": "#dcfce7"},
+                    {"range": [0,  40], "color": "#fecaca"},
+                    {"range": [40, 70], "color": "#fde68a"},
                     {"range": [70,100], "color": "#bbf7d0"},
                 ],
-                "threshold": {"line": {"color": "#22c55e", "width": 3},
+                "threshold": {"line": {"color": "#0f172a", "width": 3},
                               "thickness": 0.8, "value": pct},
             },
         ))
         gauge_fig.update_layout(
-            **CHART_BASE, height=210,
+            **CHART_BASE, height=250,
             title=dict(text="<b>Sales Performance</b><br><span style='font-size:11px;color:#64748b'>Profit Margin</span>",
-                       font=dict(size=13), x=0, y=1, yanchor="top", pad=dict(t=0)),
-            margin=dict(l=10, r=10, t=50, b=0),
+                       font=dict(size=14), x=0, y=0.97, yanchor="top", pad=dict(t=0)),
+            margin=dict(l=10, r=10, t=75, b=0),
         )
         legend_html = """
-        <div style="display:flex;justify-content:center;gap:18px;margin-top:-4px;">
+        <div style="display:flex;justify-content:center;gap:14px;margin-top:-4px;flex-wrap:wrap;">
           <div style="display:flex;align-items:center;gap:5px;font-size:.73rem;color:#64748b;">
-            <span style="width:10px;height:10px;border-radius:50%;background:#16a34a;display:inline-block;"></span>Profit
+            <span style="width:10px;height:10px;border-radius:50%;background:#fecaca;display:inline-block;"></span>Low (&lt;40%)
           </div>
           <div style="display:flex;align-items:center;gap:5px;font-size:.73rem;color:#64748b;">
-            <span style="width:10px;height:10px;border-radius:50%;background:#bbf7d0;display:inline-block;"></span>Revenue
+            <span style="width:10px;height:10px;border-radius:50%;background:#fde68a;display:inline-block;"></span>Medium
+          </div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:.73rem;color:#64748b;">
+            <span style="width:10px;height:10px;border-radius:50%;background:#bbf7d0;display:inline-block;"></span>Good (&gt;70%)
           </div>
         </div>
         """
@@ -648,14 +653,15 @@ elif page == "Dashboard":
                 z=z_data,
                 x=[m[5:] for m in all_months],
                 y=all_regions,
-                colorscale=[[0,"#f0fdf4"],[0.3,"#86efac"],[0.7,"#22c55e"],[1,"#14532d"]],
-                showscale=False, xgap=3, ygap=3,
+                colorscale=[[0,"#eff6ff"],[0.4,"#93c5fd"],[0.75,"#3b82f6"],[1,"#1e3a8a"]],
+                showscale=True, xgap=3, ygap=3,
+                colorbar=dict(title="Units", thickness=10, len=0.9),
                 hovertemplate="<b>%{y}</b> %{x}<br>Units: %{z}<extra></extra>",
             ))
             hm.update_layout(
-                **CHART_BASE, height=220,
+                **CHART_BASE, height=240,
                 margin=dict(l=0, r=0, t=0, b=0),
-                xaxis=dict(tickfont=dict(size=10)),
+                xaxis=dict(tickfont=dict(size=11), title="Month"),
                 yaxis=dict(tickfont=dict(size=11)),
             )
             plotly_chart(hm)
@@ -738,8 +744,8 @@ elif page == "Products":
                 st.markdown(f"""
                 <div style="text-align:center;padding:10px 0;">
                   <span class="badge-g">Rank #{p['rank']}</span>
-                  <div style="font-size:1.05rem;font-weight:700;color:#0f1c15;margin:10px 0 6px">{names.get(pid,pid)}</div>
-                  <div style="font-size:1.55rem;font-weight:800;color:#16a34a">{money(p['revenue_cents'])}</div>
+                  <div style="font-size:1.05rem;font-weight:700;color:#0f172a;margin:10px 0 6px">{names.get(pid,pid)}</div>
+                  <div style="font-size:1.55rem;font-weight:800;color:#2563eb">{money(p['revenue_cents'])}</div>
                   <div style="font-size:.77rem;color:#64748b;margin-top:4px">{p['quantity']:,} units &middot; {p['order_count']} orders</div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -752,21 +758,22 @@ elif page == "Products":
             st.markdown('<div class="section-title" style="margin-bottom:10px">Top 10 by Revenue</div>', unsafe_allow_html=True)
             top10 = rev_rank[:10]
             fig = go.Figure(go.Bar(
-                x=[names.get(r["product_id"], r["product_id"]) for r in top10],
-                y=[r["revenue_cents"] / 100 for r in top10],
+                y=[names.get(r["product_id"], r["product_id"]) for r in top10],
+                x=[r["revenue_cents"] / 100 for r in top10],
+                orientation="h",
                 marker=dict(
-                    color=[GREEN_PAL[min(i, len(GREEN_PAL)-1)] for i in range(len(top10))],
+                    color=[BLUE if i == 0 else BLUE_LIGHT for i in range(len(top10))],
                     line=dict(width=0),
                 ),
                 text=[money(r["revenue_cents"]) for r in top10],
-                textposition="outside", textfont=dict(size=9),
-                hovertemplate="<b>%{x}</b><br>₹%{y:,.2f}<extra></extra>",
+                textposition="outside", textfont=dict(size=11), cliponaxis=False,
+                hovertemplate="<b>%{y}</b><br>₹%{x:,.2f}<extra></extra>",
             ))
             fig.update_layout(
-                **CHART_BASE, height=300, bargap=0.35,
-                margin=dict(l=0, r=0, t=5, b=70),
-                yaxis=dict(gridcolor="rgba(0,0,0,.05)", tickprefix="₹", tickfont=dict(size=10)),
-                xaxis=dict(tickangle=-35, tickfont=dict(size=9)),
+                **CHART_BASE, height=380, bargap=0.3,
+                margin=dict(l=0, r=60, t=5, b=0),
+                xaxis=dict(gridcolor=GRID, tickprefix="₹", tickfont=dict(size=11), title="Revenue (₹)"),
+                yaxis=dict(autorange="reversed", tickfont=dict(size=11)),
             )
             plotly_chart(fig)
 
@@ -777,15 +784,16 @@ elif page == "Products":
             fig2 = go.Figure(go.Pie(
                 labels=[r["key"] for r in cat_rows],
                 values=[r["revenue_cents"] for r in cat_rows],
-                hole=0.52,
-                marker_colors=GREEN_PAL[:len(cat_rows)],
-                textfont=dict(size=11, family="Inter"),
+                hole=0.5,
+                marker=dict(colors=CAT_PAL[:len(cat_rows)], line=dict(color="white", width=2)),
+                textinfo="label+percent", textposition="outside",
+                textfont=dict(size=12, family="Inter"),
+                sort=False,
                 hovertemplate="<b>%{label}</b><br>₹%{value:,}<br>%{percent}<extra></extra>",
             ))
             fig2.update_layout(
-                **CHART_BASE, height=300,
-                margin=dict(l=0, r=0, t=5, b=0),
-                legend=dict(font=dict(size=11, family="Inter")),
+                **CHART_BASE, height=380, showlegend=False,
+                margin=dict(l=20, r=20, t=20, b=20),
             )
             plotly_chart(fig2)
 
@@ -883,11 +891,13 @@ elif page == "Customers":
             st.markdown('<div class="section-title" style="margin-bottom:10px">Orders per Customer</div>', unsafe_allow_html=True)
             fig = px.histogram(
                 x=[r["Orders"] for r in cust_rows], nbins=8,
-                color_discrete_sequence=["#22c55e"],
-                labels={"x": "Orders", "y": "Customers"},
+                color_discrete_sequence=[BLUE],
+                labels={"x": "Orders placed", "y": "Customers"},
             )
-            fig.update_layout(**CHART_BASE, height=260, margin=dict(l=0, r=0, t=10, b=0),
-                              yaxis=dict(gridcolor="rgba(0,0,0,.05)"), bargap=0.15)
+            fig.update_traces(texttemplate="%{y}", textposition="outside")
+            fig.update_layout(**CHART_BASE, height=260, margin=dict(l=0, r=0, t=20, b=0),
+                              xaxis=dict(title="Orders placed per customer"),
+                              yaxis=dict(gridcolor=GRID, title="Number of customers"), bargap=0.15)
             plotly_chart(fig)
 
     with col_top:
@@ -895,14 +905,17 @@ elif page == "Customers":
             st.markdown('<div class="section-title" style="margin-bottom:10px">Top 10 Customers by Revenue</div>', unsafe_allow_html=True)
             top10c = cust_rows[:10]
             fig2 = go.Figure(go.Bar(
-                x=[r["Customer ID"] for r in top10c],
-                y=[r["Rev_raw"] / 100 for r in top10c],
-                marker=dict(color="#16a34a", line=dict(width=0)),
-                hovertemplate="<b>%{x}</b><br>₹%{y:,.2f}<extra></extra>",
+                y=[r["Customer ID"] for r in top10c],
+                x=[r["Rev_raw"] / 100 for r in top10c],
+                orientation="h",
+                marker=dict(color=[ORANGE if i == 0 else "#fcd34d" for i in range(len(top10c))], line=dict(width=0)),
+                text=[money(r["Rev_raw"]) for r in top10c],
+                textposition="outside", textfont=dict(size=11), cliponaxis=False,
+                hovertemplate="<b>%{y}</b><br>₹%{x:,.2f}<extra></extra>",
             ))
-            fig2.update_layout(**CHART_BASE, height=260, bargap=0.35, margin=dict(l=0, r=0, t=10, b=40),
-                               yaxis=dict(gridcolor="rgba(0,0,0,.05)", tickprefix="₹"),
-                               xaxis=dict(tickangle=-40, tickfont=dict(size=9)))
+            fig2.update_layout(**CHART_BASE, height=340, bargap=0.3, margin=dict(l=0, r=60, t=10, b=0),
+                               xaxis=dict(gridcolor=GRID, tickprefix="₹", title="Revenue (₹)"),
+                               yaxis=dict(autorange="reversed", tickfont=dict(size=11)))
             plotly_chart(fig2)
 
     st.markdown("<div style='height:14px'></div>", unsafe_allow_html=True)
@@ -931,20 +944,21 @@ elif page == "Analytics":
         fig = go.Figure()
         fig.add_trace(go.Scatter(
             x=[r["key"] for r in month_rows], y=[r["revenue_cents"] / 100 for r in month_rows],
-            mode="lines+markers", name="Revenue (₹)", fill="tozeroy",
-            fillcolor="rgba(34,197,94,.1)", line=dict(color="#16a34a", width=3),
-            marker=dict(size=7, color="#16a34a"),
+            mode="lines+markers", name="Revenue (₹, left axis)", fill="tozeroy",
+            fillcolor="rgba(37,99,235,.12)", line=dict(color=BLUE, width=3),
+            marker=dict(size=8, color=BLUE),
         ))
         fig.add_trace(go.Scatter(
             x=[r["key"] for r in month_rows], y=[r["quantity"] for r in month_rows],
-            mode="lines+markers", name="Units Sold", yaxis="y2",
-            line=dict(color="#4ade80", width=2, dash="dot"),
-            marker=dict(size=6, color="#4ade80"),
+            mode="lines+markers", name="Units sold (right axis)", yaxis="y2",
+            line=dict(color=ORANGE, width=3),
+            marker=dict(size=8, color=ORANGE),
         ))
         fig.update_layout(
             **CHART_BASE, height=380, margin=dict(l=0, r=0, t=20, b=0),
-            yaxis=dict(gridcolor="rgba(0,0,0,.06)", tickprefix="₹"),
-            yaxis2=dict(overlaying="y", side="right", showgrid=False),
+            xaxis=dict(title="Month"),
+            yaxis=dict(gridcolor=GRID, tickprefix="₹", title="Revenue (₹)"),
+            yaxis2=dict(overlaying="y", side="right", showgrid=False, title="Units sold"),
             legend=dict(orientation="h", y=1.05), hovermode="x unified",
         )
         with st.container(border=True):
@@ -968,11 +982,12 @@ elif page == "Analytics":
                 fig = go.Figure(go.Bar(
                     x=[r["key"] for r in region_rows],
                     y=[r["revenue_cents"] / 100 for r in region_rows],
-                    marker=dict(color=GREEN_PAL[:len(region_rows)], line=dict(width=0)),
+                    marker=dict(color=CAT_PAL[:len(region_rows)], line=dict(width=0)),
                     text=[money(r["revenue_cents"]) for r in region_rows], textposition="outside",
                 ))
-                fig.update_layout(**CHART_BASE, height=300, bargap=0.4, margin=dict(l=0, r=0, t=10, b=0),
-                                  yaxis=dict(gridcolor="rgba(0,0,0,.05)", tickprefix="₹"))
+                fig.update_layout(**CHART_BASE, height=320, bargap=0.4, margin=dict(l=0, r=0, t=20, b=0),
+                                  xaxis=dict(title="Region"),
+                                  yaxis=dict(gridcolor=GRID, tickprefix="₹", title="Revenue (₹)"))
                 plotly_chart(fig)
 
         with c2:
@@ -981,13 +996,13 @@ elif page == "Analytics":
                 fig2 = go.Figure(go.Bar(
                     x=[r["key"] for r in cat_rows],
                     y=[r["revenue_cents"] / 100 for r in cat_rows],
-                    marker=dict(color=GREEN_PAL[:len(cat_rows)], line=dict(width=0)),
+                    marker=dict(color=CAT_PAL[:len(cat_rows)], line=dict(width=0)),
                     text=[money(r["revenue_cents"]) for r in cat_rows], textposition="outside",
                 ))
-                fig2.update_layout(**CHART_BASE, height=300, bargap=0.4,
-                                   margin=dict(l=0, r=0, t=10, b=60),
-                                   yaxis=dict(gridcolor="rgba(0,0,0,.05)", tickprefix="₹"),
-                                   xaxis=dict(tickangle=-25, tickfont=dict(size=10)))
+                fig2.update_layout(**CHART_BASE, height=320, bargap=0.4,
+                                   margin=dict(l=0, r=0, t=20, b=0),
+                                   yaxis=dict(gridcolor=GRID, tickprefix="₹", title="Revenue (₹)"),
+                                   xaxis=dict(title="Category", tickfont=dict(size=11)))
                 plotly_chart(fig2)
 
     with tab3:
@@ -998,14 +1013,14 @@ elif page == "Analytics":
                 node=dict(
                     label=["CSV Input","Python Validation","HDFS","SalesAggregation",
                            "ProductRanking","ProductJoin","Output Reader","Dashboard"],
-                    color=["#86efac","#4ade80","#22c55e","#16a34a","#15803d","#166534","#14532d","#0f1c15"],
+                    color=["#93c5fd","#60a5fa","#3b82f6","#2563eb","#1d4ed8","#f59e0b","#10b981","#8b5cf6"],
                     pad=20, thickness=28,
                 ),
                 link=dict(
                     source=[0,1,2,2,2,3,4,5,6,6,6],
                     target=[1,2,3,4,5,6,6,6,7,7,7],
                     value= [300,300,300,300,300,100,100,100,100,100,100],
-                    color=["rgba(34,197,94,.3)"] * 11,
+                    color=["rgba(59,130,246,.25)"] * 11,
                     hovertemplate="%{source.label} \u2192 %{target.label}<extra></extra>",
                 ),
             ))
