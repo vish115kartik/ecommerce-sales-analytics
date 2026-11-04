@@ -1,0 +1,10 @@
+# The Streamlit apps (app.py, demo_app.py) need a long-running Python server, which Netlify
+# does not provide. Netlify serves the static dashboard in ./site instead.
+[build]
+  publish = "site"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

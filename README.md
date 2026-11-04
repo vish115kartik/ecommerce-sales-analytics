@@ -33,7 +33,13 @@ src/ingestion/                validation and normalization
 src/hadoop/                   HDFS client, job runner, output reader
 src/orchestration.py           isolated end-to-end run controller
 tests/                         unit tests and opt-in Hadoop integration test
+site/                          static Plotly.js dashboard deployed on Netlify
+netlify.toml                   Netlify config (publishes ./site)
 ```
+
+## Netlify (static dashboard)
+
+Netlify only hosts static files, so it cannot run the Streamlit apps (`app.py`, `demo_app.py`), which need a long-running Python server. The `site/` folder is a standalone HTML/JS version of the dashboard that recomputes the metrics in the browser from the bundled sample CSVs, and lets you analyze your own CSV in Settings (processed locally, never uploaded). `netlify.toml` publishes it with no build step. To preview locally: `python -m http.server 8610 --directory site`.
 
 ## Dataset and Metrics
 

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales Analysis System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">Sales Analysis System</div>
+    <div class="nav-section">Navigation</div>
+    <nav id="nav">
+      <a href="#dashboard" data-page="dashboard">Dashboard</a>
+      <a href="#products" data-page="products">Products</a>
+      <a href="#orders" data-page="orders">Orders</a>
+      <a href="#customers" data-page="customers">Customers</a>
+      <a href="#analytics" data-page="analytics">Analytics</a>
+      <a href="#settings" data-page="settings">Settings</a>
+    </nav>
+    <div class="side-box" id="dataset-box"></div>
+  </aside>
+  <main id="view"><p class="muted">Loading data…</p></main>
+
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <script src="app.js"></script>
+</body>
+</html>
