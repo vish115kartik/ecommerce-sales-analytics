@@ -1,0 +1,8 @@
+app:
+  max_upload_megabytes: 50
+  runs_directory: runs
+hadoop:
+  executable: hadoop
+  mapreduce_jar: hadoop-jobs/target/ecommerce-sales-analytics-1.0.0.jar
+  hdfs_root: /bda_sales/runs
+  command_timeout_seconds: 600
